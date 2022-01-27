@@ -5,7 +5,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 	private DefaultCountingOutRhymer countingRhymer = new DefaultCountingOutRhymer();
 
 	@Override
-	public int countOut() {
+	protected int countOut() {
 		while (!callCheck())
 			countingRhymer.countIn(super.countOut());
 
