@@ -9,13 +9,11 @@ public class DefaultCountingOutRhymer {
 	private final int[] numbers = new int[SIZE];
 
 	private int total = ERROR;
-<<<<<<< HEAD
-=======
 
 	public int getTotal() {
 		return total;
 	}
->>>>>>> hermetization
+
 
 	public void countIn(int in) {
 		if (!isFull())
