@@ -1,40 +1,56 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * @author aforu
+ * Class is unused
+ */
 public class IntLinkedList {
 
-	Node last;
-	int i;
+	private Node last;
+	private int i;
 
-	public void push(int i) {
-		if (last == null)
-			last = new Node(i);
+	protected void push(int i) {
+		if (getLast() == null)
+			setLast(new Node(i));
 		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
+			getLast().setNext(new Node(i));
+			getLast().getNext().setPrev(getLast());
+			setLast(getLast().getNext());
 		}
 	}
 
-	public boolean isEmpty() {
-		return last == null;
+	protected boolean isEmpty() {
+		return getLast() == null;
 	}
 
-	public boolean isFull() {
+	protected boolean isFull() {
 		return false;
 	}
 
-	public int top() {
+	protected int top() {
 		if (isEmpty())
 			return -1;
-		return last.value;
+		return getLast().getValue();
 	}
 
-	public int pop() {
+	protected int pop() {
 		if (isEmpty())
 			return -1;
-		int ret = last.value;
-		last = last.prev;
+		int ret = getLast().getValue();
+		setLast(getLast().getPrev());
 		return ret;
+	}
+
+	Node getLast() {
+		return last;
+	}
+
+	void setLast(Node last) {
+		this.last = last;
+	}
+
+	int getI() {
+		return i;
 	}
 
 }

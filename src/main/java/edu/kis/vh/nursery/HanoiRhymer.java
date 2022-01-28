@@ -1,17 +1,21 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-int totalRejected = 0;
+	private int totalRejected = 0;
 
-	public int reportRejected() {
+	protected int reportRejected() {
 		return totalRejected;
 	}
 
+	@Override
 	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
+		if (!callCheck() && in > peekaboo())
 			totalRejected++;
-			else
-				super.countIn(in);
+		else
+			super.countIn(in);
 	}
 }
+//  File edited in Eclipse, shortcuts do following things:
+//	alt + left arrow key switches to previously opened file
+//	alt + right arrow key switches in opposite direction
