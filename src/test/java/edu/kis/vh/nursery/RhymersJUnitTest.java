@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
+	//1.5.3 Code passed all tests without need to edit
 
 	@Test
 	public void testCountIn() {
