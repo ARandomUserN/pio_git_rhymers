@@ -1,5 +1,9 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * @author aforu
+ * Class is unused
+ */
 public class IntLinkedList {
 
 	private Node last;

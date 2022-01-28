@@ -1,5 +1,9 @@
 package edu.kis.vh.nursery;
 
+/**
+ * @author aforu
+ * Parent class that stores elements of a rhymer
+ */
 public class DefaultCountingOutRhymer {
 
 	public static final int SIZE = 12;
